@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import 'semantic-ui-css/semantic.min.css'
+import { Grid } from 'semantic-ui-react';
+import Conversor from './components/Conversor';
 
 function App() {
+
+  const gridStyle = {
+    padding: "30px 30px"
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Grid style={gridStyle} columns={6} centered>
+
+    <Grid.Row>
+      <Grid.Column>
+        <Conversor moedaOrigem="USD" moedaDestino="BRL"></Conversor>
+      </Grid.Column>
+    </Grid.Row>
+
+  </Grid>
+  )
 }
 
 export default App;
