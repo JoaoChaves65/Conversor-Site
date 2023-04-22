@@ -6,7 +6,7 @@ import Conversor from './components/Conversor';
 function App() {
 
   const gridStyle = {
-    padding: "30px 30px"
+    padding: "30px 10px"
   }
 
   return (
